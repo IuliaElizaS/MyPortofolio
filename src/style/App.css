@@ -1,6 +1,70 @@
-.App {
+.app {
   text-align: center;
+  height: 100vh;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.signiture {
   font-family: 'Dancing Script', cursive;
-font-family: 'Josefin Sans', sans-serif;
-font-family: 'Marck Script', cursive;
+  font-size: 19px;
+}
+
+/* --- HEADER COMPONENT --- */
+.header {
+  width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: center;
+}
+
+.logo {
+  display: block;
+  width: 100px;
+  height: 100px;
+  padding: 5px;
+  align-self: center;
+}
+
+.name {
+  display: block;
+  padding: 5px;
+}
+
+h1 {
+  font-family: 'Dancing Script', cursive;
+  color: #ef665c;
+  font-size: 30px;
+}
+
+h2 {
+  color: #317067;
+  font-size: 22px
+}
+
+.music {
+  display: block;
+  height: 50px;
+  width: auto;
+  float: right;
+  padding: 5px;
+}
+
+/* --- FOOTER COMPONENT --- */
+.footer {
+  width: 100vw;
+  display: inline-flex;
+  justify-content: center;
+}
+
+.item {
+  display: block;
+  padding: 5px 15px;
+  height: 40px;
+}
+
+.socialLogo {
+  display: block;
+  max-height: 100%;
+  width: auto;
 }

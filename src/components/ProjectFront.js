@@ -6,11 +6,11 @@ class ProjectFront extends React.Component {
   render (){
     return (
       <div className="front">
-        <img className="preview" src="../img/preview.jpg">
+        <img className="preview" src="../img/preview.jpg"></img>
         <a href="https://github.com/IuliaElizaS/Animal-Trading-Card">Live version</a>
       </div>
     )
   }
 }
 
-export default Project;
+export default ProjectFront;

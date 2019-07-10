@@ -1,6 +1,7 @@
 import React from 'react';
 import '../style/App.css';
 import '../style/responsive.css';
+import Home from './Home';
 import AboutMe from './AboutMe';
 import Projects from './Projects';
 import Contact from './Contact';
@@ -19,9 +20,3 @@ class Main extends React.Component {
 }
 
 export default Main;
-
-
-<Home/>
-<AboutMe/>
-<Projects/>
-<Contact/>

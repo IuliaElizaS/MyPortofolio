@@ -8,7 +8,7 @@ class ProjectBack extends React.Component {
       <div className="back">
         <p className="description">
           a simple app that ....
-          <br>
+          <br></br>
           Created using HTML, JS, CSS
         </p>
         <a href="https://github.com/IuliaElizaS/Animal-Trading-Card">See repository</a>
