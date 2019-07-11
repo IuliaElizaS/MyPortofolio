@@ -11,8 +11,7 @@ class App extends React.Component {
     return (
       <div className="app">
         <Header/>
-        {/* <NavBar/>
-        <Main/>*/}
+        <NavBar/>
         <Footer/>
         <p className="signiture"> &#169; IuliaElizaS 2019</p>
       </div>
