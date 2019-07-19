@@ -2,19 +2,19 @@ import React from 'react';
 import '../style/App.css';
 import '../style/responsive.css';
 
-class ProjectBack extends React.Component {
+class Back extends React.Component {
   render (){
     return (
       <div className="back">
         <p className="description">
-          a simple app that ....
+          {this.props.description}
           <br></br>
-          Created using HTML, JS, CSS
+          Created using <span>{this.props.usedTech}</span>
         </p>
-        <a href="https://github.com/IuliaElizaS/Animal-Trading-Card">See repository</a>
+        <a href={this.props.repo}>See repository</a>
       </div>
     )
   }
 }
 
-export default ProjectBack;
+export default Back;

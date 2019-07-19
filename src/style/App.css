@@ -1,54 +1,58 @@
 .app {
   text-align: center;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
+  margin: auto;
   font-family: 'Josefin Sans', sans-serif;
 }
 
 .signiture {
   font-family: 'Dancing Script', cursive;
-  font-size: 19px;
+  font-size: 17px;
 }
 
 /* --- HEADER COMPONENT --- */
 .header {
-  width: 100vw;
+  width: 100%;
+  padding: 2px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-between;
   align-content: center;
 }
 
 .logo {
   display: block;
-  width: 100px;
-  height: 100px;
-  padding: 5px;
+  width: 80px;
+  height: 80px;
+  padding: 2px;
   align-self: center;
 }
 
 .name {
   display: block;
-  padding: 5px;
+  padding: 2px;
 }
 
 h1 {
   font-family: 'Dancing Script', cursive;
   color: #ef665c;
-  font-size: 30px;
+  font-size: 25px;
 }
 
 h2 {
   color: #317067;
-  font-size: 22px
+  font-size: 20px;
 }
 
 .music {
   display: block;
   height: 50px;
-  width: auto;
-  float: right;
-  padding: 5px;
+  max-width: 80%;
+  padding: 2px;
+  margin: 5px auto;
 }
+
 
 /* --- NAVBAR COMPONENT --- */
 .navBar {
@@ -59,27 +63,128 @@ h2 {
 
 .navItem {
   display: inline-block;
-  height: 25px;
+  height: 24px;
   width: 25%;
   background-color: #feb8a3;
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
   text-align: center;
   vertical-align: middle;
-  padding-top: 5px;
-  font-size: 18px;
+  padding-top: 3px;
+  font-size: 17px;
   color: #ef665c;
 }
 
-.navItem:hover , .navItem:focus {
-  font-size: 20px;
+.navItem :hover, .navItem :focus {
+  font-size: 19px;
   color: #317067;
 }
 
+/* --- MAIN COMPONENT --- */
+.mainContainer {
+  display: block;
+  width: 95%;
+  min-height: 60%;
+  margin: auto;
+}
+
+/* --- HOME COMPONENT --- */
+.home {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: space-around;
+  text-align: justify;
+}
+.picture {
+  height: 35%;
+  width: 35%;
+  padding: 10px;
+}
+
+/* --- PROJECTS & PROJECT COMPONENTS --- */
+.projectsContainer {
+  display: block;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  /*background-color: #feb8a3;*/
+  padding: 2px;
+}
+.title {
+  font-family: 'Dancing Script', cursive;
+  color: #ef665c;
+  font-size: 23px;
+  text-align: left;
+  padding: 5px;
+}
+.content {
+  font-size: 18px;
+  text-align: justify;
+  padding: 2px;
+}
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 5px;
+  justify-content: space-around;
+  align-content: space-around;
+}
+.card {
+  display: block;
+  width: 90%;
+  height: auto;
+  min-height: 300px;
+  /*min-width: 300px;
+  min-height: 300px;*/
+  border: 1.5px solid #69a176;
+  padding: 2px;
+  margin: 3px auto;
+  perspective: 600px; /*gives the 3D effect */
+}
+.project {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: 2s;
+  transform-style: preserve-3d;
+}
+.project :hover {
+  animation-play-state: paused; /*pauses the animation on hoover*/
+}
+.projectTitle {
+  font-family: 'Dancing Script', cursive;
+  font-size: 23px;
+  color: #ef665c;
+}
+.front, .back {
+  display: block;
+  position: absolute;
+  width: 90%;
+  height: 75%;
+  background: linear-gradient(#bde3d4, 30%, #feb8a3);
+  border: 1px solid  #ef665c;
+  text-align: justify;
+  padding: 5px;
+  margin: 1px auto;
+  backface-visibility: hidden;
+  /*transform: rotateX(180deg);*/
+  animation-name: flip; /* connects the flip animation to the elements*/
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+@keyframes flip {
+  transform: rotateX(180deg);
+}
+.preview {
+  min-width: 250px;
+  margin: auto;
+}
 
 /* --- FOOTER COMPONENT --- */
 .footer {
-  width: 100vw;
+  width: 100%;
   display: inline-flex;
   justify-content: center;
 }
@@ -87,7 +192,7 @@ h2 {
 .item {
   display: block;
   padding: 5px 15px;
-  height: 40px;
+  height: 30px;
 }
 
 .socialLogo {
