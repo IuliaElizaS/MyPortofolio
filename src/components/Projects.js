@@ -1,39 +1,43 @@
 import React from 'react';
+import Project from './Project';
+import Menu from './Menu';
 import '../style/App.css';
 import '../style/responsive.css';
-import Project from './Project';
 
 class Projects extends React.Component {
   render (){
     return (
-      <div className="projectsContainer">
-        <h2 className="title"> Some of my Projects </h2>
-        <p className="content">
-          Here you can see a few of the projects I enjoyed working on. With one click you can check out the live version or the repository.
-          <br></br>
-          For more projects please visit my
-          <a href="https://github.com/IuliaElizaS"> GitHub </a>
-          account.
-        </p>
-        <ul className="list">
-          {
-            /* maps over the projects array and renders the project's card*/
-            projects.map((project, index) => {
-              return(
-                <li className="card" key={index}>
-                  <Project name={project.name}
-                           description={project.description}
-                           usedTech={project.tech}
-                           repo={project.repo}
-                           preview={project.preview}
-                           livePage={project.live}
-                  />
-                </li>
-              )
-            })
-          }
-        </ul>
-        <p className="content"> ... and more will come. </p>
+      <div>
+        <Menu/>
+        <div className="projectsContainer">
+          <h2 className="title"> Some of my Projects </h2>
+          <p className="content">
+            Here you can see a few of the projects I enjoyed working on. With one click you can check out the live version or the repository.
+            <br></br>
+            For more projects please visit my
+            <a href="https://github.com/IuliaElizaS">GitHub</a>
+            account.
+          </p>
+          <ul className="list">
+            {
+              /* maps over the projects array and renders the project's card*/
+              projects.map((project, index) => {
+                return(
+                  <li className="card" key={index}>
+                    <Project name={project.name}
+                             description={project.description}
+                             usedTech={project.tech}
+                             repo={project.repo}
+                             preview={project.preview}
+                             livePage={project.live}
+                    />
+                  </li>
+                )
+              })
+            }
+          </ul>
+          <p className="content"> ... and more will come. </p>
+        </div>
       </div>
     )
   }

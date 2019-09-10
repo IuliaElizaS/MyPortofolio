@@ -1,27 +1,41 @@
 import React from 'react';
-import '../style/App.css';
-import '../style/responsive.css';
 import Front from './Front';
 import Back from './Back';
+import '../style/App.css';
+import '../style/responsive.css';
 
 class Project extends React.Component {
+  // flips the project card
+  flipCard = () => {
+    const cards = document.getElementsByClassName('project');
+    for (const card of cards) {
+      card.classList.toggle('flipped');
+    };
+  }
+
+  //calls the flipCard function every 7 seconds
+  repeatFlip = () => {
+    setInterval(this.flipCard, 7000);
+  }
+
+  componentDidMount () {
+    this.repeatFlip();
+  }
+
   render (){
     return (
       <div className="project">
-        <h3 className="projectTitle">{this.props.name}</h3>
         <Front
+          name={this.props.name}
           preview={this.props.preview}
           livePage={this.props.livePage}
         />
         <Back
+          name={this.props.name}
           description={this.props.description}
           usedTech={this.props.usedTech}
           repo={this.props.repo}
         />
-        {/* Front and Back components are fliped using CSS
-          animation obtained by following the tutorials from
-          https://www.w3schools.com/howto/howto_css_flip_image.asp and
-          https://www.w3schools.com/css/css3_animations.asp  */ }
       </div>
     )
   }

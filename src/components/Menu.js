@@ -3,10 +3,10 @@ import {Link} from 'react-router-dom';
 import '../style/App.css';
 import '../style/responsive.css';
 
-class NavBar extends React.Component {
+class Menu extends React.Component {
   render (){
     return (
-      <nav className="navBar">
+      <nav className="menu">
         <div className="navItem" id="home">
           <Link to='/'>Home</Link>
         </div>
@@ -18,10 +18,10 @@ class NavBar extends React.Component {
         </div>
         <div className="navItem" id="contact">
           <Link to='/contact'>Contact</Link>
-        </div>        
+        </div>
       </nav>
     )
   }
 }
 
-export default NavBar;
+export default Menu;

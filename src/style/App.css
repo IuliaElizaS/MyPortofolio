@@ -1,14 +1,17 @@
 .app {
-  text-align: center;
   width: 100%;
   height: 100%;
-  margin: auto;
+  margin: 0;
+  background: linear-gradient(to right, #000428, #004e92); /* source https://uigradients.com/#Frost */
+  color: #ffffff;
+  text-align: center;
   font-family: 'Josefin Sans', sans-serif;
 }
 
 .signiture {
   font-family: 'Dancing Script', cursive;
   font-size: 17px;
+  margin: 10px auto 5px;
 }
 
 /* --- HEADER COMPONENT --- */
@@ -17,7 +20,7 @@
   padding: 2px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
   align-content: center;
 }
 
@@ -27,6 +30,7 @@
   height: 80px;
   padding: 2px;
   align-self: center;
+  border-radius: 50%;
 }
 
 .name {
@@ -38,6 +42,7 @@ h1 {
   font-family: 'Dancing Script', cursive;
   color: #ef665c;
   font-size: 25px;
+  padding: 2px;
 }
 
 h2 {
@@ -53,9 +58,18 @@ h2 {
   margin: 5px auto;
 }
 
+/* --- MAIN COMPONENT --- */
+.mainContainer {
+  display: block;
+  width: 95%;
+  height: auto;
+  max-height: 55%;
+  margin: 0 auto;
+  align-content: center;
+}
 
-/* --- NAVBAR COMPONENT --- */
-.navBar {
+/* --- MENU COMPONENT --- */
+.menu {
   width: 95%;
   margin: auto;
   vertical-align: bottom;
@@ -65,14 +79,10 @@ h2 {
   display: inline-block;
   height: 24px;
   width: 25%;
-  background-color: #feb8a3;
-  border-top-right-radius: 10px;
-  border-top-left-radius: 10px;
   text-align: center;
   vertical-align: middle;
   padding-top: 3px;
   font-size: 17px;
-  color: #ef665c;
 }
 
 .navItem :hover, .navItem :focus {
@@ -80,26 +90,68 @@ h2 {
   color: #317067;
 }
 
-/* --- MAIN COMPONENT --- */
-.mainContainer {
-  display: block;
-  width: 95%;
-  min-height: 60%;
-  margin: auto;
+/* --- HOME COMPONENT --- */
+.box {
+  width: 80%;
+  height: 80%;
+  margin: 10%;
+  perspective: 600px; /* creates the 3d space */
+  /*transform-origin: center; */
 }
 
-/* --- HOME COMPONENT --- */
-.home {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-content: space-around;
-  text-align: justify;
+.carousel {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-origin: center;
+  transform-style: preserve-3d; /* in order for subsequent children to inherit his parent’s perspective */
+  transition: transform 1s;
+	/*transform: translateZ(300px) rotateY(0);*/
+	/*animation-name: infiniteCarousel;
+  animation-duration: 20s;
+  animation-timing-function: step(3,end);
+  animation-iteration-count: infinite; */
 }
+
+.carousel :hover {
+  animation-play-state: paused; /*pauses the animation on hoover*/
+}
+
+.slide {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border: 5px  double #ffffff;
+  border-radius: 10px;
+  transform-origin: center;
+}
+
+.one {
+  background-color: #317067;
+  transform: rotateY(0) translateZ(300px);
+}
+
+.two {
+  background-color: #ef665c;
+  transform: rotateY(120) translateZ(0vw);
+}
+
+.three {
+  background-color: #ec4913;
+  transform: rotateX(240) translateZ(0vw);
+}
+
+@keyframes infiniteCarousel {
+  0%  { transform: translateZ(-35vw) rotateY(0); }
+	45%  { transform: translateZ(-35vw) rotateY(-120deg); }
+	75%  { transform: translateZ(-35vw) rotateY(-240deg); }
+	100% { transform: translateZ(-35vw) rotateY(-360deg); }
+}
+
 .picture {
-  height: 35%;
-  width: 35%;
-  padding: 10px;
+  max-height: 150px;
+  max-width: 150px;
+  border-radius: 50%;
 }
 
 /* --- PROJECTS & PROJECT COMPONENTS --- */
@@ -107,8 +159,6 @@ h2 {
   display: block;
   width: 100%;
   height: 100%;
-  margin: auto;
-  /*background-color: #feb8a3;*/
   padding: 2px;
 }
 .title {
@@ -124,79 +174,90 @@ h2 {
   padding: 2px;
 }
 .list {
+  list-style: none;
   display: flex;
   flex-wrap: wrap;
-  padding: 5px;
   justify-content: space-around;
-  align-content: space-around;
+  align-items: center;
 }
 .card {
-  display: block;
-  width: 90%;
-  height: auto;
-  min-height: 300px;
-  /*min-width: 300px;
-  min-height: 300px;*/
-  border: 1.5px solid #69a176;
+  min-width: 250px;
+  height: 270px;
   padding: 2px;
-  margin: 3px auto;
-  perspective: 600px; /*gives the 3D effect */
+  margin: 40px 30px;
+  perspective: 1200px;
 }
 .project {
   width: 100%;
   height: 100%;
   position: relative;
-  transition: 2s;
+  transition: transform 1.5s linear;
   transform-style: preserve-3d;
+  transform-origin: center;
+  margin: 10px;
 }
-.project :hover {
-  animation-play-state: paused; /*pauses the animation on hoover*/
+
+.front, .back {
+  display: box;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 2px solid  #ef665c;
+  border-radius: 10px;
+  padding: 8px;
+  vertical-align: middle;
+  backface-visibility: hidden;
+  color: #000000;
+  background: linear-gradient(to right, #c6ffdd, #fbd786, #f7797d);
 }
+.back {
+  transform: rotateY(180deg);
+  transform-origin: center;
+  }
 .projectTitle {
   font-family: 'Dancing Script', cursive;
-  font-size: 23px;
+  font-size: 21px;
+  font-weight: bolder;
   color: #ef665c;
-}
-.front, .back {
-  display: block;
-  position: absolute;
-  width: 90%;
-  height: 75%;
-  background: linear-gradient(#bde3d4, 30%, #feb8a3);
-  border: 1px solid  #ef665c;
-  text-align: justify;
-  padding: 5px;
-  margin: 1px auto;
-  backface-visibility: hidden;
-  /*transform: rotateX(180deg);*/
-  animation-name: flip; /* connects the flip animation to the elements*/
-  animation-duration: 4s;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-}
-@keyframes flip {
-  transform: rotateX(180deg);
+  margin: 10px auto;
 }
 .preview {
-  min-width: 250px;
-  margin: auto;
+  min-width: 150px;
+  width: 95%;
+  margin: 5px auto;
 }
+.description {
+  text-align: justify;
+}
+a {
+  padding: 10px;
+  color: #ef665c;
+  text-decoration: none;
+  font-weight: bolder;
+}
+.flipped {
+  transform: rotateY(180deg);
+}
+
 
 /* --- FOOTER COMPONENT --- */
 .footer {
   width: 100%;
   display: inline-flex;
   justify-content: center;
+  align-content: center;
+  margin-top: 20px;
 }
 
 .item {
   display: block;
-  padding: 5px 15px;
+  padding: 3px 15px;
   height: 30px;
 }
 
-.socialLogo {
+.socialLogo .email {
   display: block;
   max-height: 100%;
   width: auto;
+  align-self: center;
 }
