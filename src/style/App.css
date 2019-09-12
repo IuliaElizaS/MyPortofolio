@@ -2,7 +2,7 @@
   width: 100%;
   height: 100%;
   margin: 0;
-  background: linear-gradient(to right, #000428, #004e92); /* source https://uigradients.com/#Frost */
+  background: linear-gradient(to right, #1C1C1C, #2c5364);
   color: #ffffff;
   text-align: center;
   font-family: 'Josefin Sans', sans-serif;
@@ -26,8 +26,8 @@
 
 .logo {
   display: block;
-  width: 80px;
-  height: 80px;
+  width: 50px;
+  height: 50px;
   padding: 2px;
   align-self: center;
   border-radius: 50%;
@@ -46,7 +46,7 @@ h1 {
 }
 
 h2 {
-  color: #317067;
+  color: #008080;
   font-size: 20px;
 }
 
@@ -65,29 +65,43 @@ h2 {
   height: auto;
   max-height: 55%;
   margin: 0 auto;
-  align-content: center;
 }
 
 /* --- MENU COMPONENT --- */
 .menu {
+  display: inline-flex;
   width: 95%;
-  margin: auto;
-  vertical-align: bottom;
+  height: 30px;
+  margin: 10px auto 20px 5px;
+  background-color: #ef665c25;
+  border-radius: 20px;
 }
-
+.menuButton {
+  width: 30px;
+  height: 30px;
+  border-radius: 20px;
+  background-image: url('/img/icons8-circled-menu-100.png');
+  /* icon source: www.icons8.com */
+  background-size: cover;
+}
+.navBar {
+  height: 30px;
+  width: 93%;
+  align-content: center;
+  justify-content: flex-start;
+}
 .navItem {
-  display: inline-block;
-  height: 24px;
-  width: 25%;
-  text-align: center;
-  vertical-align: middle;
-  padding-top: 3px;
+  display: inline-flex;
+  padding: 2px;
   font-size: 17px;
+  vertical-align: middle;
 }
-
+.navItem a {
+  color: #008080;
+}
 .navItem :hover, .navItem :focus {
-  font-size: 19px;
-  color: #317067;
+  font-size: 18px;
+  color: #ffffff;
 }
 
 /* --- HOME COMPONENT --- */
@@ -149,8 +163,8 @@ h2 {
 }
 
 .picture {
-  max-height: 150px;
-  max-width: 150px;
+  max-height: 80px;
+  max-width: 80px;
   border-radius: 50%;
 }
 
@@ -206,9 +220,7 @@ h2 {
   border-radius: 10px;
   padding: 8px;
   vertical-align: middle;
-  backface-visibility: hidden;
-  color: #000000;
-  background: linear-gradient(to right, #c6ffdd, #fbd786, #f7797d);
+  backface-visibility: hidden;  
 }
 .back {
   transform: rotateY(180deg);
@@ -222,6 +234,7 @@ h2 {
   margin: 10px auto;
 }
 .preview {
+  border-radius: 10px;
   min-width: 150px;
   width: 95%;
   margin: 5px auto;
