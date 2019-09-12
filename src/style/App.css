@@ -8,12 +8,6 @@
   font-family: 'Josefin Sans', sans-serif;
 }
 
-.signiture {
-  font-family: 'Dancing Script', cursive;
-  font-size: 17px;
-  margin: 10px auto 5px;
-}
-
 /* --- HEADER COMPONENT --- */
 .header {
   width: 100%;
@@ -65,6 +59,7 @@ h2 {
   height: auto;
   max-height: 55%;
   margin: 0 auto;
+  padding-bottom: 80px;
 }
 
 /* --- MENU COMPONENT --- */
@@ -106,11 +101,11 @@ h2 {
 
 /* --- HOME COMPONENT --- */
 .box {
-  width: 80%;
-  height: 80%;
-  margin: 10%;
-  perspective: 600px; /* creates the 3d space */
-  /*transform-origin: center; */
+  width: 95%;
+  height: 95%;
+  margin: auto;
+  perspective: 800px; /* creates the 3d space */
+  background-color: red;
 }
 
 .carousel {
@@ -220,7 +215,7 @@ h2 {
   border-radius: 10px;
   padding: 8px;
   vertical-align: middle;
-  backface-visibility: hidden;  
+  backface-visibility: hidden;
 }
 .back {
   transform: rotateY(180deg);
@@ -256,21 +251,30 @@ a {
 /* --- FOOTER COMPONENT --- */
 .footer {
   width: 100%;
-  display: inline-flex;
+  height: 80px;
+  border-bottom: 0px; /* positions the footer at the bottom of the page */
   justify-content: center;
   align-content: center;
-  margin-top: 20px;
-}
+  padding-top: 5px;
 
+}
+.logos{
+  display: inline-flex;
+}
 .item {
   display: block;
   padding: 3px 15px;
   height: 30px;
 }
-
 .socialLogo .email {
   display: block;
   max-height: 100%;
   width: auto;
   align-self: center;
+}
+.signiture {
+  font-family: 'Dancing Script', cursive;
+  font-size: 17px;
+  margin: 10px auto 5px;
+  flex-flow: column;
 }
