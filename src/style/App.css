@@ -1,6 +1,7 @@
 .app {
   width: 100%;
   height: 100%;
+
   margin: 0;
   background: linear-gradient(to right, #1C1C1C, #2c5364);
   color: #ffffff;
@@ -10,7 +11,7 @@
 
 /* --- HEADER COMPONENT --- */
 .header {
-  width: 100%;
+  width: 98%;
   padding: 2px;
   display: flex;
   flex-wrap: wrap;
@@ -56,8 +57,8 @@ h2 {
 .mainContainer {
   display: block;
   width: 95%;
-  height: auto;
-  max-height: 55%;
+  min-height: 268px;
+  height: 100%;
   margin: 0 auto;
   padding-bottom: 80px;
 }
@@ -65,9 +66,9 @@ h2 {
 /* --- MENU COMPONENT --- */
 .menu {
   display: inline-flex;
-  width: 95%;
+  width: 98%;
   height: 30px;
-  margin: 10px auto 20px 5px;
+  margin: 10px auto 20px 3px;
   background-color: #ef665c25;
   border-radius: 20px;
 }
@@ -81,15 +82,13 @@ h2 {
 }
 .navBar {
   height: 30px;
-  width: 93%;
-  align-content: center;
-  justify-content: flex-start;
+  width: 95%;
+  text-align: left;
 }
 .navItem {
-  display: inline-flex;
-  padding: 2px;
+  display: inline-block;
+  padding: 6px 2px;
   font-size: 17px;
-  vertical-align: middle;
 }
 .navItem a {
   color: #008080;
@@ -101,65 +100,63 @@ h2 {
 
 /* --- HOME COMPONENT --- */
 .box {
-  width: 95%;
-  height: 95%;
+  width: 180px;
+  height: 180px;
   margin: auto;
+  position: relative;
   perspective: 800px; /* creates the 3d space */
-  background-color: red;
+  perspective-origin: center;
 }
 
 .carousel {
-  position: relative;
+  position: absolute;
   width: 100%;
   height: 100%;
   transform-origin: center;
   transform-style: preserve-3d; /* in order for subsequent children to inherit his parent’s perspective */
-  transition: transform 1s;
-	/*transform: translateZ(300px) rotateY(0);*/
-	/*animation-name: infiniteCarousel;
-  animation-duration: 20s;
-  animation-timing-function: step(3,end);
-  animation-iteration-count: infinite; */
+  animation-name: infiniteCarousel;
+  animation-direction: reverse;
+  animation-duration: 18s;
+  animation-iteration-count: infinite;
 }
-
-.carousel :hover {
-  animation-play-state: paused; /*pauses the animation on hoover*/
-}
-
 .slide {
   position: absolute;
-  width: 200px;
-  height: 200px;
-  border: 5px  double #ffffff;
+  top: 35%;
+  width: 180px;
+  height: 180px;
+  border: 3px solid #ef665c;
   border-radius: 10px;
-  transform-origin: center;
 }
 
 .one {
   background-color: #317067;
-  transform: rotateY(0) translateZ(300px);
+  transform: rotateY(0deg) translateZ(120px);
 }
 
 .two {
   background-color: #ef665c;
-  transform: rotateY(120) translateZ(0vw);
+  transform: rotateY(120deg) translateZ(120px);
 }
 
 .three {
   background-color: #ec4913;
-  transform: rotateX(240) translateZ(0vw);
+  transform: rotateY(240deg) translateZ(120px);
 }
-
+/* carousel method adapted from https://3dtransforms.desandro.com/carousel */
 @keyframes infiniteCarousel {
-  0%  { transform: translateZ(-35vw) rotateY(0); }
-	45%  { transform: translateZ(-35vw) rotateY(-120deg); }
-	75%  { transform: translateZ(-35vw) rotateY(-240deg); }
-	100% { transform: translateZ(-35vw) rotateY(-360deg); }
+  0%  {transform: rotateY(0deg);
+    transition-timing-function: 1s ease-out;}
+	33.3%  {transform: rotateY(120deg);
+  transition-timing-function: 1s ease-out;}
+	66.7%  {transform: rotateY(240deg);
+  transition-timing-function: 1s ease-out;}
+	100% {transform: rotateY(360deg);
+  transition-timing-function: 1s ease-out;}
 }
 
 .picture {
-  max-height: 80px;
-  max-width: 80px;
+  max-height: 50px;
+  max-width: 50px;
   border-radius: 50%;
 }
 
@@ -190,24 +187,23 @@ h2 {
   align-items: center;
 }
 .card {
-  min-width: 250px;
-  height: 270px;
+  min-width: 260px;
+  height: 280px;
   padding: 2px;
-  margin: 40px 30px;
+  margin: 40px 25px;
   perspective: 1200px;
 }
 .project {
-  width: 100%;
-  height: 100%;
+  width: 95%;
+  height: 95%;
   position: relative;
-  transition: transform 1.5s linear;
+  transition: transform 2s linear;
   transform-style: preserve-3d;
   transform-origin: center;
-  margin: 10px;
 }
 
 .front, .back {
-  display: box;
+  display: block;
   position: absolute;
   width: 100%;
   height: 100%;
@@ -250,13 +246,12 @@ a {
 
 /* --- FOOTER COMPONENT --- */
 .footer {
-  width: 100%;
+  width: 98%;
   height: 80px;
-  border-bottom: 0px; /* positions the footer at the bottom of the page */
+  bottom: 0px; /* positions the footer at the bottom of the page */
+  padding-top: 5px;
   justify-content: center;
   align-content: center;
-  padding-top: 5px;
-
 }
 .logos{
   display: inline-flex;

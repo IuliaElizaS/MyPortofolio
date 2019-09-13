@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom';
 import '../style/App.css';
 import '../style/responsive.css';
 
-class Home extends React.Component {
+class Carousel extends React.Component {
   render (){
     return (
       <div className="box">
@@ -12,7 +12,7 @@ class Home extends React.Component {
             <img className="picture" src="../img/myPicture.jpg" alt="portrait of Iulia"></img>
             <h2 className="title"> Hello & Wellcome!</h2>
             <p> Here you can find a few things
-            <Link to='/about'>about me</Link>              </p>
+            <Link to='/about'>about me</Link>
           </div>
           <div className="slide two">
             <img className="picture" src="" alt="projects"></img>
@@ -30,4 +30,5 @@ class Home extends React.Component {
   }
 }
 
-export default Home;
+export default Carousel;
+/* inspired by https://codepen.io/edmundojr/pen/qdLWWx */
