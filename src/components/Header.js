@@ -7,7 +7,6 @@ class Header extends React.Component {
   render (){
     return (
       <div className="header">
-        <img className="logo" src="/img/logo.png" alt="2 letter logo"></img>
         <div className="name">
           <h1> Iulia Eliza Sabadas </h1>
           <h2> junior front-end developer </h2>
