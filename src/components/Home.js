@@ -9,20 +9,19 @@ class Home extends React.Component {
       <div className="box">
         <div className="carousel">
           <div className="slide one">
-            <img className="picture" src="../img/myPicture.jpg" alt="portrait of Iulia"></img>
-            <h2 className="title"> Hello & Wellcome!</h2>
-            <p> Here you can find a few things
-            <Link to='/about'>about me</Link>              </p>
+            <h2 className="title"> Hello & Wellcome</h2>
+            <p> Here you will find a few things
+            <Link to='/about'>about me ...</Link>              </p>
           </div>
           <div className="slide two">
-            <img className="picture" src="" alt="projects"></img>
-            <h2 className="title"> Projects </h2>
-            <Link to='/projects'></Link>
+            <p> ... you can take a look at some of
+              <Link to='/projects'>my projects </Link>
+            </p>
           </div>
           <div className="slide three">
-            <img className="picture" src="" alt="icon"></img>
-            <h2 className="title"> Contact </h2>
-            <Link to='/contact'></Link>
+            <p> ... or you can
+              <Link to='/contact'>contact me </Link>
+            </p>
           </div>
         </div>
       </div>

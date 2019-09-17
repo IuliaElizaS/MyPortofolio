@@ -54,14 +54,14 @@ class Projects extends React.Component {
 
   {name:'My Reads',
    description:'A bookshelf app that allows the user to select and categorize books they have read, are currently reading, or want to read. There is also a search page, where the user can search for new books and add them to the existing library, on the proper shelf.',
-   tech:'HTML5, CSS3, ES6, ReactJs',
+   tech:'HTML5, CSS3, ES6 and ReactJs',
    preview:'/img/reads.png',
    repo:'https://github.com/IuliaElizaS/reactnd-project-myreads',
    live:'myreads-mylibrary.netlify.com'},
 
-  {name:'Macthing game',
+  {name:'Matching game',
    description:'It is a Memory game app. The game board consists of sixteen cards (eight different pairs), each with different symbols on one side. The player has to match all the cards by flipping them one by one. The game includes a time and a moves counter and also a star rating.',
-   tech:'HTML5, CSS3, ES6',
+   tech:'HTML5, CSS3 and ES6',
    preview:'/img/memo.png',
    repo:'https://github.com/IuliaElizaS/Matching-Game',
    live:'https://iuliaelizas.github.io/Matching-Game/'},
@@ -89,7 +89,7 @@ class Projects extends React.Component {
 
   {name:'Neighborhood Map',
    description:'A single page application featuring a map of Baia Mare city. The map highlights a few locations where people can spend their free time. Includes third-party data about those locations and various ways to browse the content',
-   tech:'HTML5, CSS3, ES6, ReactJs, APIs',
+   tech:'HTML5, CSS3, ES6, ReactJs and APIs',
    preview:'/img/map.jpg',
    repo:'https://github.com/IuliaElizaS/Neighborhood-Map-v2',
    live:'https://my-neighborhood-map-v2.netlify.com'}];

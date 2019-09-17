@@ -107,7 +107,6 @@ h2 {
   perspective: 800px; /* creates the 3d space */
   perspective-origin: center;
 }
-
 .carousel {
   position: absolute;
   width: 100%;
@@ -122,26 +121,44 @@ h2 {
 .slide {
   position: absolute;
   top: 35%;
-  width: 180px;
+  width: 200px;
   height: 180px;
-  border: 3px solid #ef665c;
+  border: 1px solid #ffffff;
   border-radius: 10px;
+  background-color: #2c5364;
 }
-
 .one {
-  background-color: #317067;
+  background-image: url('/img/frog-1610551_640.jpg');
+  /* image source: https://pixabay.com/ro/photos/broasc%C4%83-sta-banc%C4%83-banc-odihn%C4%83-1610551/ */
+  background-size: contain;
+  background-repeat: no-repeat;
   transform: rotateY(0deg) translateZ(120px);
 }
-
 .two {
-  background-color: #ef665c;
+  background-image: url('/img/frog-1339904_640.jpg');
+  /* image source: https://pixabay.com/ro/photos/broasc%C4%83-figura-fi%C5%9Fiere-stiv%C4%83-1339904/ */
+  background-size: contain;
+  background-repeat: no-repeat;
   transform: rotateY(120deg) translateZ(120px);
 }
-
 .three {
-  background-color: #ec4913;
+  background-image: url('/img/frog-881660_640.jpg');
+  /* image source: https://pixabay.com/ro/photos/broasc%C4%83-sta-banc%C4%83-banc-odihn%C4%83-1610551/ */
+  background-size: contain;
+  background-repeat: no-repeat;
   transform: rotateY(240deg) translateZ(120px);
 }
+.slide h2 {
+  font-size: 17px;
+  color: #008080;
+  float: right;
+  padding: 8px 18px 8px 5px;
+}
+.slide p {
+  display: block;
+  margin: 140px auto 20px auto;
+}
+
 /* carousel method adapted from https://3dtransforms.desandro.com/carousel */
 @keyframes infiniteCarousel {
   0%  {transform: rotateY(0deg);
