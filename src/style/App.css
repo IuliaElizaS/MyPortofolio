@@ -35,14 +35,14 @@ audio {
   height: 25px;
   width: 180px;
   padding: 8px;
-  margin: auto;
+  margin: 30px auto;
 }
 
 /* --- MAIN COMPONENT --- */
 .mainContainer {
   display: block;
   width: 95%;
-  min-height: 280px;
+  min-height: 310px;
   height: 100%;
   margin: 0 auto;
   padding-bottom: 80px;
@@ -85,8 +85,8 @@ audio {
 
 /* --- HOME COMPONENT --- */
 .box {
-  width: 180px;
-  height: 180px;
+  width: 200px;
+  height: 200px;
   margin: auto;
   position: relative;
   perspective: 800px; /* creates the 3d space */
@@ -156,11 +156,6 @@ audio {
   transition-timing-function: 1s ease-out;}
 }
 
-.picture {
-  max-height: 50px;
-  max-width: 50px;
-  border-radius: 50%;
-}
 
 /* --- PROJECTS & PROJECT COMPONENTS --- */
 .projectsContainer {
@@ -203,7 +198,6 @@ audio {
   transform-style: preserve-3d;
   transform-origin: center;
 }
-
 .front, .back {
   display: block;
   position: absolute;
@@ -245,6 +239,33 @@ a {
   transform: rotateY(180deg);
 }
 
+
+/* --- ABOUT ME COMPONENT --- */
+.picture {
+  max-height: 100px;
+  max-width: 100px;
+  border: 1px solid #ffffff;
+  border-radius: 50%;
+  float: right;
+  padding: 2px 10px;
+}
+
+/* --- CONTACT COMPONENT --- */
+.contactForm {
+  width: 95%;
+  margin: 30px auto 5px auto;
+}
+button, textarea, input {
+  border-radius: 10px;
+}
+input {
+  width: 90%;
+  height: 20px;
+}
+textarea {
+  width: 90%;
+  min-height: 100px;
+}
 
 /* --- FOOTER COMPONENT --- */
 .footer {
