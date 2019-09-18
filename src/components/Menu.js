@@ -7,7 +7,7 @@ class Menu extends React.Component {
   render (){
     return (
       <nav className="menu">
-        <div className="menuButton"></div>
+        <div className="menuIcon"></div>
         <div className="navBar">
           <div className="navItem" id="home">
             <Link to='/'>Home</Link>

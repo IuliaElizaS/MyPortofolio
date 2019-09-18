@@ -33,7 +33,7 @@ h2 {
 }
 audio {
   height: 25px;
-  width: 180px;
+  width: 190px;
   padding: 8px;
   margin: 30px auto;
 }
@@ -57,7 +57,7 @@ audio {
   background-color: #ef665c25;
   border-radius: 20px;
 }
-.menuButton {
+.menuIcon {
   width: 30px;
   height: 30px;
   border-radius: 20px;
