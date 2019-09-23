@@ -46,9 +46,8 @@
     width: 95%;
   }
   .card {
-    min-width: 230px;
+    width: 230px;
     height: 290px;
-    left: 5px;
     margin: 40px auto;
   }
 }

@@ -177,7 +177,6 @@ audio {
   padding: 2px;
 }
 .list {
-  list-style: none;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -194,7 +193,7 @@ audio {
   width: 95%;
   height: 95%;
   position: relative;
-  transition: transform 2s linear;
+  transition: transform 1.5s linear;
   transform-style: preserve-3d;
   transform-origin: center;
 }
@@ -219,6 +218,20 @@ audio {
   font-weight: bolder;
   color: #ef665c;
   margin: 10px auto;
+}
+.right{
+  background-image: url("/img/icons8-double-right-100.png");
+  float: right;
+}
+.left {
+  background-image: url("/img/icons8-double-left-100.png");
+  float: left;
+}
+.right, .left {
+  width: 25px;
+  height: 25px;
+  background-size: cover;
+  margin: 8px;
 }
 .preview {
   border-radius: 10px;

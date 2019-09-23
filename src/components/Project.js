@@ -4,22 +4,13 @@ import Back from './Back';
 import '../style/App.css';
 import '../style/responsive.css';
 
+
 class Project extends React.Component {
-  // flips the project card
-  flipCard = () => {
-    const cards = document.getElementsByClassName('project');
-    for (const card of cards) {
-      card.classList.toggle('flipped');
-    };
-  }
-
-  //calls the flipCard function every 7 seconds
-  repeatFlip = () => {
-    setInterval(this.flipCard, 7000);
-  }
-
-  componentDidMount () {
-    this.repeatFlip();
+  // flips the project's card
+  flipCard = (target) => {
+    //gets clicked button's grandparent div in order to change grandparent's class
+    const grandParentDiv = target.parentNode.parentNode;
+    grandParentDiv.classList.toggle('flipped');
   }
 
   render (){
@@ -29,12 +20,14 @@ class Project extends React.Component {
           name={this.props.name}
           preview={this.props.preview}
           livePage={this.props.livePage}
+          flipCard={this.flipCard}
         />
         <Back
           name={this.props.name}
           description={this.props.description}
           usedTech={this.props.usedTech}
           repo={this.props.repo}
+          flipCard={this.flipCard}
         />
       </div>
     )

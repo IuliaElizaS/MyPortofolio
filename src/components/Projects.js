@@ -13,17 +13,18 @@ class Projects extends React.Component {
           <h2 className="title"> Some of my Projects </h2>
           <p className="content">
             Here you can see a few of the projects I enjoyed working on. With one click you can check out the live version or the repository.
-            <br></br>
+          </p>
+          <p className="content">
             For more projects please visit my
             <a href="https://github.com/IuliaElizaS">GitHub</a>
             account.
           </p>
-          <ul className="list">
+          <div className="list">
             {
               /* maps over the projects array and renders the project's card*/
               projects.map((project, index) => {
                 return(
-                  <li className="card" key={index}>
+                  <div className="card" key={index}>
                     <Project name={project.name}
                              description={project.description}
                              usedTech={project.tech}
@@ -31,11 +32,11 @@ class Projects extends React.Component {
                              preview={project.preview}
                              livePage={project.live}
                     />
-                  </li>
+                  </div>
                 )
               })
             }
-          </ul>
+          </div>
           <p className="content"> ... and more will come. </p>
         </div>
       </div>

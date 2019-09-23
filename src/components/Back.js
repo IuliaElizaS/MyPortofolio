@@ -6,6 +6,7 @@ class Back extends React.Component {
   render (){
     return (
       <div className="back">
+        <button className="left" onClick={(event) => this.props.flipCard(event.target)}></button>
         <h3 className="projectTitle">{this.props.name}</h3>
         <p className="description">
           {this.props.description}
