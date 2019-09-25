@@ -14,10 +14,7 @@ let i=0;
 class Sound extends React.Component {
   //when a song finished playing, jumps to the next one
   playNext = (event) => {
-    i=i+1;
-    if (i >= sourceArr.length) {
-      i=0;
-    };
+    i < sourceArr.length-1 ? i=i+1 : i=0;
     let myPlayer = document.getElementById('player');
     myPlayer.src = sourceArr[i];
     myPlayer.play(); //plays the new song
