@@ -23,6 +23,7 @@ The website was deployed using Netlify and you can check the live version on htt
 - method for Switch implemetation: https://github.com/ReactTraining/react-router/blob/master/packages/react-router/docs/api/Switch.md
 - method for "art direction": https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images
 - method for image carousel adapted from https://3dtransforms.desandro.com/carousel
+- Helmet Component and it's implementation method: https://github.com/nfl/react-helmet
 - Netlify's contact form handling implementation: https://www.netlify.com/docs/form-handling/ and https://www.netlify.com/blog/2017/07/20/how-to-integrate-netlifys-form-handling-in-a-react-app/
 
 ## Create React App
