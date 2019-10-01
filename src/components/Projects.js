@@ -58,7 +58,7 @@ class Projects extends React.Component {
    tech:'HTML5, CSS3, ES6 and ReactJs',
    preview:'/img/reads.png',
    repo:'https://github.com/IuliaElizaS/reactnd-project-myreads',
-   live:'myreads-mylibrary.netlify.com'},
+   live:'https://myreads-mylibrary.netlify.com'},
 
   {name:'Matching game',
    description:'It is a Memory game app. The game board consists of sixteen cards (eight different pairs), each with different symbols on one side. The player has to match all the cards by flipping them one by one. The game includes a time and a moves counter and also a star rating.',
