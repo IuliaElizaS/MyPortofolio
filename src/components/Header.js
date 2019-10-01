@@ -11,7 +11,7 @@ class Header extends React.Component {
           <h1> Iulia Eliza Sabadas </h1>
           <h2> junior front-end developer </h2>
         </div>
-        <Sound /*sound={this.state.sound} status={this.state.status} change={this.changeSound}*//>
+        <Sound/>
       </div>
     )
   }

@@ -15,7 +15,7 @@ class Modal extends React.Component {
       <div id="resume">
         <div className="modalContainer">
           <button id="close" onClick={this.closeModal}>X</button>
-          <object name="resume" type="application/pdf" data="/documents/IuliaElizaSabadasResume.pdf"></object>
+          <object name="resume" type="document/pdf" data="/documents/IuliaElizaSabadasResume.pdf"></object>
         </div>
       </div>
     )

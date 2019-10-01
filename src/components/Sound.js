@@ -25,7 +25,7 @@ class Sound extends React.Component {
       <div className="music">
         <audio id="player" controls="controls" autoPlay={false} onEnded={this.playNext}>
         {/* "controls" proprety adds the default browser's audio controls */}
-          <source src="/sound/music_zapsplat_above_the_clouds_100.mp3" type="audio/mp3"></source>
+          <source src="/sound/music_zapsplat_above_the_clouds_100.mp3" type="audio/mpeg"></source>
           <p>your browser doesn't support audio tag or this file</p>
         </audio>
       </div>

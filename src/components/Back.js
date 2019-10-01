@@ -14,7 +14,7 @@ class Back extends React.Component {
         <p className="description">
           Created using: <span>{this.props.usedTech}</span>
         </p>
-        <a href={this.props.repo}>See repository</a>
+        <a href={this.props.repo} target="_blank">See repository</a>
       </div>
     )
   }

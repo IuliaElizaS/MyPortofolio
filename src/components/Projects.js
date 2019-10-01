@@ -16,7 +16,7 @@ class Projects extends React.Component {
           </p>
           <p className="content">
             For more projects please visit my
-            <a href="https://github.com/IuliaElizaS">GitHub</a>
+            <a href="https://github.com/IuliaElizaS" target="_blank">GitHub</a>
             account.
           </p>
           <div className="list">

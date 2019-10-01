@@ -8,7 +8,7 @@ class Footer extends React.Component {
       <div className="footer">
       <div className="logos">
           <div className="item">
-            <a href="https://github.com/IuliaElizaS">
+            <a href="https://github.com/IuliaElizaS" target="_blank">
               <picture className="socialLogo">
                 <source media="(max-width: 450px)" srcSet="/img/Octocat.png"></source>
                 <source media="(min-width: 451px)" srcSet="/img/GitHub_Logo.png"></source>
@@ -19,7 +19,7 @@ class Footer extends React.Component {
             {/* method for "art direction" from https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images */ }
           </div>
           <div className="item">
-            <a href="https://de.linkedin.com/in/iuliaelizasabadas">
+            <a href="https://de.linkedin.com/in/iuliaelizasabadas" target="_blank">
               <picture className="socialLogo">
                 <source media="(max-width: 450px)" srcSet="/img/LI-In-Bug.png"></source>
                 <source media="(min-width: 451px)" srcSet="/img/LI-Logo.png"></source>
@@ -29,7 +29,7 @@ class Footer extends React.Component {
             </a>
           </div>
           <div className="item">
-            <a href="mailto: iuliaelizamts@gmail.com">
+            <a href="mailto: iuliaelizamts@gmail.com" target="_top">
               <img className="email" src="/img/icons8-secured-letter-64.png" alt="a brief"></img>
               {/* icon source https://www.icons8.com */}
             </a>

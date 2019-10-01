@@ -9,7 +9,7 @@ class Front extends React.Component {
         <button className="right" onClick={(event) => this.props.flipCard(event.target)}></button>
         <h3 className="projectTitle">{this.props.name}</h3>
         <img className="preview" src={this.props.preview} alt="printscreen of the live page"></img>
-        <a href={this.props.livePage}>Live version</a>
+        <a href={this.props.livePage} target="_blank">Live version</a>
       </div>
     )
   }

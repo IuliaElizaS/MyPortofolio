@@ -11,7 +11,7 @@ class Contact extends React.Component {
         <div className="contact">
           <p className="content">
             I am opened for questions, sugestions, new oportunities.
-            Please feel free to contact me by<a href="https://de.linkedin.com/in/iuliaelizasabadas">Linkedin</a>or use the form below
+            Please feel free to contact me by<a href="https://de.linkedin.com/in/iuliaelizasabadas" target="_blank">Linkedin</a>or use the form below
           </p>
           <form className="contactForm" name="contact" method="post">
             <input type="hidden" name="form-name" value="portofolioContactForm" />
