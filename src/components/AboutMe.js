@@ -1,20 +1,9 @@
 import React from 'react';
 import Menu from './Menu';
-import Modal from './Modal';
 import '../style/App.css';
 import '../style/responsive.css';
 
-
-
-
 class AboutMe extends React.Component {
-
-  //opens the resume file in a modal window, on button click
-  openModal = () => {
-    const resumeModal = document.getElementById('resume');
-    resumeModal.style.display ="block";
-  }
-
   render (){
     return (
       <div>
@@ -32,9 +21,10 @@ class AboutMe extends React.Component {
             After working for more than 7 years in travel industry I've decided to make a career change. Wanting to learn more about web development and to improve my skills gained during my jobs, I enrolled in the "EMEA Google Developer Scholarship Program" created by Udacity and Google.
             During 10 months of intense learning I've developed skills needed for front-end web development. Now I want to improve them and also to learn new things related to this field.
           </p>
-          <button id="openResume" onClick={this.openModal}>View my Resume</button>
+          <a href="/documents/IuliaElizaSabadasResume.pdf" target="_blank">
+            <button id="openResume">View my Resume</button>
+          </a>
         </div>
-        <Modal/>
       </div>
     )
   }
