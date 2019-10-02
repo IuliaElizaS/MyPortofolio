@@ -13,8 +13,8 @@ class Contact extends React.Component {
             I am opened for questions, sugestions, new oportunities.
             Please feel free to contact me by<a href="https://de.linkedin.com/in/iuliaelizasabadas" target="_blank">Linkedin</a>or use the form below
           </p>
-          <form className="contactForm" name="contact" method="post">
-            <input type="hidden" name="portofolioContactForm" value="contact" />
+          <form className="contactForm" name="contact" data-netlify="true" method="post">
+            <input type="hidden" name="form-name" value="contact" />
             <p className="formRubric">
               <label>Your Name: <input type="text" name="name"/></label>
             </p>
